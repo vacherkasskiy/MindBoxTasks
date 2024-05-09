@@ -1,0 +1,8 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/Highlighting/HighlightingSourceSnapshotLocation/@EntryValue">C:\Users\cherk\AppData\Local\JetBrains\Rider2024.1\resharper-host\temp\Rider\vAny\CoverageData\_MindBoxTasks.-2111529934\Snapshot\snapshot.utdcvr</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=7f153260_002D6122_002D4543_002D9eb0_002Dcf395a5517bd/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TriangleCreation_WithNegativeSide_ShouldThrowArgumentException" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::0F196704-204D-4973-B237-C066E4ED2585::net8.0::MindBoxTasks.AreaCalculatorTests.Tests.TriangleTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::0F196704-204D-4973-B237-C066E4ED2585::net8.0::MindBoxTasks.AreaCalculatorTests.Fakers.TriangleFaker.CircleCreation_WithInvalidRadius_ShouldThrowArgumentException&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
