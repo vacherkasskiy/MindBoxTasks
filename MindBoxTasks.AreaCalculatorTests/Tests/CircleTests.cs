@@ -9,14 +9,13 @@ public class CircleTests
 {
     private readonly CircleFaker _faker = new CircleFaker();
     
-    [Fact]
-    public void Creation_With_InvalidRadius_ShouldThrow_ArgumentException()
+    [Theory]
+    [InlineData(0)]
+    [InlineData(-1)]
+    public void Creation_With_InvalidRadius_ShouldThrow_ArgumentException(double radius)
     {
-        // Arrange
-        double r = 0;
-        
-        // Act & Assert
-        Assert.Throws<ArgumentException>(() => new Circle(r));
+        // Arrange & Act & Assert
+        Assert.Throws<ArgumentException>(() => new Circle(radius));
     }
     
     [Fact]

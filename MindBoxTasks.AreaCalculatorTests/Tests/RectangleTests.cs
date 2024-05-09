@@ -9,13 +9,16 @@ public class RectangleTests
 {
     private readonly RectangleFaker _faker = new RectangleFaker();
     
-    [Fact]
-    public void Creation_With_NegativeSide_ShouldThrow_ArgumentException()
+    [Theory]
+    [InlineData(0, 10)]
+    [InlineData(5, 0)]
+    [InlineData(-1, 2)]
+    [InlineData(-3, 4)]
+    [InlineData(-1, -1)]
+    [InlineData(0, 0)]
+    public void Creation_With_NegativeSide_ShouldThrow_ArgumentException(double a, double b)
     {
-        // Arrange
-        double a = 10, b = -1;
-        
-        // Act & Assert
+        // Arrange & Act & Assert
         Assert.Throws<ArgumentException>(() => new Rectangle(a, b));
     }
     

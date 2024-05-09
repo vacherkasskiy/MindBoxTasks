@@ -5,9 +5,11 @@ namespace MindBoxTasks.Common.Models;
 
 public class Triangle : IShape
 {
+    private const double Tolerance = 1e-9;
     public double A { get; }
     public double B { get; }
     public double C { get; }
+    public bool IsRightAngled => CheckIfRightAngled();
 
     public Triangle(double a, double b, double c)
     {
@@ -31,5 +33,14 @@ public class Triangle : IShape
     public double GetPerimeter()
     {
         return A + B + C;
+    }
+
+    private bool CheckIfRightAngled()
+    {
+        var a = MyMath.Max(A, B, C);
+        var b = MyMath.Min(A, B, C);
+        var c = GetPerimeter() - a - b;
+
+        return (Math.Abs(a * a - (b * b + c * c)) < Tolerance);
     }
 }

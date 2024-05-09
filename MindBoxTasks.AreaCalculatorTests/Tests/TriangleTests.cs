@@ -9,24 +9,53 @@ public class TriangleTests
 {
     private readonly TriangleFaker _faker = new TriangleFaker();
 
-    [Fact]
-    public void Creation_With_NegativeSide_ShouldThrow_ArgumentException()
+    [Theory]
+    [InlineData(-1, 4, 5)]
+    [InlineData(5, -6, 13)]
+    [InlineData(6, 8, -1)]
+    [InlineData(-4, -3, -6)]
+    [InlineData(0, 4, 5)]
+    [InlineData(5, 0, 13)]
+    [InlineData(6, 8, 0)]
+    [InlineData(0, 0, 0)]
+    public void Creation_With_NonPositiveSide_ShouldThrow_ArgumentException(
+        double a,
+        double b,
+        double c)
     {
-        // Arrange
-        double a = 10, b = 20, c = -1;
-        
-        // Act & Assert
+        // Arrange & Act & Assert
         Assert.Throws<ArgumentException>(() => new Triangle(a, b, c));
     }
     
-    [Fact]
-    public void Creation_With_ImpossibleSides_ShouldThrow_ArgumentException()
+    [Theory]
+    [InlineData(100, 50, 50)]
+    [InlineData(2, 100, 3)]
+    [InlineData(10, 10, 137)]
+    public void Creation_With_ImpossibleSides_ShouldThrow_ArgumentException(
+        double a,
+        double b,
+        double c)
+    {
+        // Arrange & Act & Assert
+        Assert.Throws<ArgumentException>(() => new Triangle(a, b, c));
+    }
+    
+    [Theory]
+    [InlineData(3, 4, 5, true)]
+    [InlineData(5, 12, 13, true)]
+    [InlineData(6, 8, 10, true)]
+    [InlineData(3, 3, 3, false)]
+    [InlineData(4, 5, 6, false)]
+    public void IsRightAngled_ShouldReturn_CorrectValue(double a, double b, double c, bool expectedValue)
     {
         // Arrange
-        double a = 50, b = 50, c = 100;
-        
-        // Act & Assert
-        Assert.Throws<ArgumentException>(() => new Triangle(a, b, c));
+        var triangle = new Triangle(a, b, c);
+
+        // Act
+        var actualValue = triangle.IsRightAngled;
+
+        // Assert
+        Assert.Equal(expectedValue, actualValue);
     }
     
     [Fact]
