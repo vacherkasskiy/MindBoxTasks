@@ -46,7 +46,11 @@ public class TriangleTests
     [InlineData(6, 8, 10, true)]
     [InlineData(3, 3, 3, false)]
     [InlineData(4, 5, 6, false)]
-    public void IsRightAngled_ShouldReturn_CorrectValue(double a, double b, double c, bool expectedValue)
+    public void IsRightAngled_ShouldReturn_CorrectValue(
+        double a,
+        double b,
+        double c,
+        bool expectedValue)
     {
         // Arrange
         var triangle = new Triangle(a, b, c);
