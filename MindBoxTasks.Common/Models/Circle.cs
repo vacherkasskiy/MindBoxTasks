@@ -1,6 +1,6 @@
-﻿using MindBoxTasks.AreaCalculator.Models.Interfaces;
+﻿using MindBoxTasks.Common.Models.Interfaces;
 
-namespace MindBoxTasks.AreaCalculator.Models;
+namespace MindBoxTasks.Common.Models;
 
 public class Circle : IShape
 {
@@ -16,8 +16,8 @@ public class Circle : IShape
         Radius = radius;
     }
 
-    public int GetPerimeter()
+    public double GetPerimeter()
     {
-        throw new NotImplementedException();
+        return 2 * Math.PI * Radius;
     }
 }

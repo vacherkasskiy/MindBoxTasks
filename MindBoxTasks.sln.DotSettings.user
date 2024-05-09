@@ -4,5 +4,9 @@
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::0F196704-204D-4973-B237-C066E4ED2585::net8.0::MindBoxTasks.AreaCalculatorTests.Tests.TriangleTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::0F196704-204D-4973-B237-C066E4ED2585::net8.0::MindBoxTasks.AreaCalculatorTests.Fakers.TriangleFaker.CircleCreation_WithInvalidRadius_ShouldThrowArgumentException&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::0F196704-204D-4973-B237-C066E4ED2585::net8.0::MindBoxTasks.AreaCalculatorTests.Tests.CalculatorTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::0F196704-204D-4973-B237-C066E4ED2585::net8.0::MindBoxTasks.AreaCalculatorTests.Tests.CircleTests.GetPerimeter_ShouldReturn_CorrectAnswer&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::0F196704-204D-4973-B237-C066E4ED2585::net8.0::MindBoxTasks.AreaCalculatorTests.Tests.CircleTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::0F196704-204D-4973-B237-C066E4ED2585::net8.0::MindBoxTasks.AreaCalculatorTests.Tests.RectangleTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

@@ -1,4 +1,4 @@
-﻿namespace MindBoxTasks.AreaCalculator.Models.Interfaces;
+﻿namespace MindBoxTasks.Common.Models.Interfaces;
 
 /// <summary>
 /// Все фигуры должны реализовывать данный интерфейс.
@@ -6,5 +6,5 @@
 /// </summary>
 public interface IShape
 {
-    int GetPerimeter();
+    double GetPerimeter();
 }

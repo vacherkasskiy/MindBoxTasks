@@ -1,7 +1,7 @@
-﻿using MindBoxTasks.AreaCalculator.Models.Interfaces;
+﻿using MindBoxTasks.Common.Models.Interfaces;
 using MindBoxTasks.Common.Utils;
 
-namespace MindBoxTasks.AreaCalculator.Models;
+namespace MindBoxTasks.Common.Models;
 
 public class Triangle : IShape
 {
@@ -28,8 +28,8 @@ public class Triangle : IShape
         C = c;
     }
 
-    public int GetPerimeter()
+    public double GetPerimeter()
     {
-        throw new NotImplementedException();
+        return A + B + C;
     }
 }

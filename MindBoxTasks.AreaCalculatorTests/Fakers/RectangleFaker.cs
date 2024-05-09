@@ -4,17 +4,16 @@ using MindBoxTasks.Common.Models;
 
 namespace MindBoxTasks.AreaCalculatorTests.Fakers;
 
-public class TriangleFaker
+public class RectangleFaker
 {
-    private readonly Faker<Triangle> _autoFaker = new AutoFaker<Triangle>()
-        .CustomInstantiator(f => new Triangle(
-            f.Random.Double(50, 100),
+    private readonly Faker<Rectangle> _autoFaker = new AutoFaker<Rectangle>()
+        .CustomInstantiator(f => new Rectangle(
             f.Random.Double(50, 100),
             f.Random.Double(50, 100))); 
 
-    public IEnumerable<Triangle> Generate(int count = 1)
+    public IEnumerable<Rectangle> Generate(int count = 1)
     {
-        var result = new List<Triangle>();
+        var result = new List<Rectangle>();
 
         for (var i = 0; i < count; ++i)
         {
