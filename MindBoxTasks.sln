@@ -6,6 +6,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6D6804C0-AD7
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{A10E1549-B5B1-413D-9EDB-D878DA76B088}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MindBoxTasks.Common", "MindBoxTasks.Common\MindBoxTasks.Common.csproj", "{DFA9E003-6DDB-4B15-9977-E8C36027B957}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MindBoxTasks.AreaCalculatorTests", "MindBoxTasks.AreaCalculatorTests\MindBoxTasks.AreaCalculatorTests.csproj", "{0F196704-204D-4973-B237-C066E4ED2585}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -16,8 +20,18 @@ Global
 		{01FA0D82-EF1B-4FD9-B60C-27E86E126663}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01FA0D82-EF1B-4FD9-B60C-27E86E126663}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01FA0D82-EF1B-4FD9-B60C-27E86E126663}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFA9E003-6DDB-4B15-9977-E8C36027B957}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFA9E003-6DDB-4B15-9977-E8C36027B957}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFA9E003-6DDB-4B15-9977-E8C36027B957}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFA9E003-6DDB-4B15-9977-E8C36027B957}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F196704-204D-4973-B237-C066E4ED2585}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F196704-204D-4973-B237-C066E4ED2585}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F196704-204D-4973-B237-C066E4ED2585}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F196704-204D-4973-B237-C066E4ED2585}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{01FA0D82-EF1B-4FD9-B60C-27E86E126663} = {6D6804C0-AD79-4B80-AC78-3E222989C95C}
+		{DFA9E003-6DDB-4B15-9977-E8C36027B957} = {6D6804C0-AD79-4B80-AC78-3E222989C95C}
+		{0F196704-204D-4973-B237-C066E4ED2585} = {A10E1549-B5B1-413D-9EDB-D878DA76B088}
 	EndGlobalSection
 EndGlobal
