@@ -1,5 +1,4 @@
 ﻿using MindBoxTasks.Common.Models.Interfaces;
-using MindBoxTasks.Common.Utils;
 
 namespace MindBoxTasks.Common.Models;
 
@@ -19,7 +18,7 @@ public class Triangle : IShape
         }
 
         var sum = a + b + c;
-        var max = MyMath.Max(a, b, c);
+        var max = Max(a, b, c);
         if (max >= sum - max)
         {
             throw new ArgumentException("Triangle with provided sides cannot exist.");
@@ -37,10 +36,21 @@ public class Triangle : IShape
 
     private bool CheckIfRightAngled()
     {
-        var a = MyMath.Max(A, B, C);
-        var b = MyMath.Min(A, B, C);
+        var a = Max(A, B, C);
+        var b = Min(A, B, C);
         var c = GetPerimeter() - a - b;
 
         return (Math.Abs(a * a - (b * b + c * c)) < Tolerance);
     }
+
+    private double Max(params double[] values)
+    {
+        return values.Max();
+    }
+    
+    private double Min(params double[] values)
+    {
+        return values.Min();
+    }
+    
 }

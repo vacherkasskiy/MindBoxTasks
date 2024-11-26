@@ -5,15 +5,20 @@ namespace MindBoxTasks.AreaCalculator;
 
 public static class AreaCalculator
 {
+    private static readonly Dictionary<Type, Func<IShape, double>> AreaCalculators = new()
+    {
+        { typeof(Circle), shape => CalculateCircleArea((Circle)shape) },
+        { typeof(Triangle), shape => CalculateTriangleArea((Triangle)shape) },
+        // Add new shapes here. They have to implement IShape interface.
+    };
+
     public static double GetArea(this IShape shape)
     {
-        return shape switch
+        if (AreaCalculators.TryGetValue(shape.GetType(), out var calculator))
         {
-            Triangle triangle => CalculateTriangleArea(triangle),
-            Circle circle => CalculateCircleArea(circle),
-            // Add new shapes here. They have to implement IShape interface.
-            _ => throw new ArgumentException("Unsupported shape type.")
-        };
+            return calculator(shape);
+        }
+        throw new ArgumentException("Unsupported shape type.");
     }
     
     private static double CalculateTriangleArea(Triangle triangle)
